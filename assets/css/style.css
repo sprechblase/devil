@@ -37,18 +37,45 @@ SOFTWARE.
   --accent: #380adb;
 }
 
+[data-dark-mode]{
+  --text: #e8e9e2;
+  --background: #11110d;
+  --background2: #1c1c18;
+  --backgroundAccent: #131310;
+  --primary-button: #434054;
+  --secondary-button: #060604;
+  --accent: #434054;
+}
+
 body{
   background-color: var(--background);
   color: var(--text);
   font-family: LGC;
 }
 
+.darkMode-button{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: var(--text);
+  transition: 0.5s;
+}
+
 .site-title{
+  margin-top: 20px;
   font-size: 20px;
-  white-space: pre;
+  white-space: pre-line;
+  text-align: center;
 }
 
 .site-title img{
-  height: 60px;
-  width: auto;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
+
+footer a{
+  color: var(--text);
+  text-decoration: none;
 }
