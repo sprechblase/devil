@@ -21,3 +21,34 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
+@font-face {
+  font-family: "LGC";
+  src: url("../data/fonts/Louis George Cafe/Louis George Cafe.ttf");
+}
+
+:root{
+  --text: #131801;
+  --background: #fdfff5;
+  --background2: #f1f3e9;
+  --backgroundAccent: #f6f6f6;
+  --primary-button: #7855f7;
+  --secondary-button: #ffffff;
+  --accent: #380adb;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
+  font-family: LGC;
+}
+
+.site-title{
+  font-size: 20px;
+  white-space: pre;
+}
+
+.site-title img{
+  height: 60px;
+  width: auto;
+}
