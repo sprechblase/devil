@@ -1,0 +1,2 @@
+1090px x 410px
+radius: 100px
