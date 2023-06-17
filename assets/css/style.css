@@ -27,6 +27,11 @@ SOFTWARE.
   src: url("../data/fonts/Louis George Cafe/Louis George Cafe.ttf");
 }
 
+@font-face {
+  font-family: "LGC-light";
+  src: url("../data/fonts/Louis George Cafe/Louis George Cafe Light.ttf");
+}
+
 :root{
   --text: #131801;
   --background: #fdfff5;
@@ -51,6 +56,7 @@ body{
   background-color: var(--background);
   color: var(--text);
   font-family: LGC;
+  min-height: 100%;
 }
 
 .darkMode-button{
@@ -71,16 +77,16 @@ body{
 
 .site-title img{
   max-width: 100%;
-  width: 300px;
+  width: 320px;
   height: auto;
 }
 
 .grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20px, 450px));
-  grid-gap: 24px;
+  grid-gap: 30px;
   justify-items: center;
-  margin: 0;
+  margin: 20px;
   margin-top: 50px;
   padding: 0;
   text-align: center;
@@ -104,15 +110,48 @@ body{
   width: 450px;
   height: auto;
   opacity: .9;
-  filter: drop-shadow(1px 1px 4px #000);
+  filter: drop-shadow(1px 1px 4px var(--text));
   transform: scale(1.015)
 }
 
+footer button{
+  background: transparent;
+  padding: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 8px;
+  border: 1px solid var(--text);
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: LGC-light;
+  cursor: pointer;
+}
+
+footer button:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.01);
+}
+
 footer{
-  
+  white-space: pre-line;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  margin-top: 40px;
+  font-size: 23px;
+  width: 100%;
+  font-family: LGC-light;
 }
 
 footer a{
+  color: var(--text);
+  text-decoration: none;
+}
+
+.privacy-policy{
+  margin-top: 30px;
+  font-size: 15px;
+  font-family: LGC-light;
   color: var(--text);
   text-decoration: none;
 }
