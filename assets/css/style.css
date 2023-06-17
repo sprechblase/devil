@@ -59,7 +59,7 @@ body{
   top: 10px;
   cursor: pointer;
   color: var(--text);
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .site-title{
@@ -73,6 +73,26 @@ body{
   max-width: 100%;
   width: 300px;
   height: auto;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 450px));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  place-items: center;
+  justify-content: center;
+}
+
+.grid-object{
+
+}
+
+.grid-object:hover{
+  opacity: .9;
 }
 
 footer a{
