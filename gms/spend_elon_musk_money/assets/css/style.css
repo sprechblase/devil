@@ -21,3 +21,222 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
+@font-face {
+  font-family: "LGC";
+  src: url("../../../../assets/data/fonts/Louis George Cafe/Louis George Cafe.ttf");
+}
+
+@font-face {
+  font-family: "LGC-light";
+  src: url("../../../../assets/data/fonts/Louis George Cafe/Louis George Cafe Light.ttf");
+}
+
+:root{
+  --text: #131801;
+  --background: #fdfff5;
+  --background2: #f1f3e9;
+  --background3: #eaedde;
+  --backgroundAccent: #f6f6f6;
+  --primary-button: #7855f7;
+  --secondary-button: #ffffff;
+  --accent: #380adb;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
+  font-family: LGC;
+  min-height: 100%;
+}
+
+.darkMode-button{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: var(--text);
+  transition: 1s;
+}
+
+.site-title{
+  font-size: 20px;
+  text-align: right;
+}
+
+.site-title img{
+  max-width: 100%;
+  width: 220px;
+  height: auto;
+}
+.site-title img:hover{
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  transform: scale(1.008);
+}
+
+.game1{
+  position: relative;
+  background-color: var(--background3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  margin: auto;
+  width: 60%;
+  height: 90px;
+  text-align: center;
+  font-family: Dubai;
+  font-size: 40px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+
+.game1 img{
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1250px) {
+    .game1 img {display:none;}
+}
+
+.game2{
+  background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  width: 60%;
+  text-align: center;
+  font-family: Dubai;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+
+.game2 #game-percentage{
+  opacity: .35;
+  font-size: 55px;
+  font-weight: bold;
+  position: absolute;
+  padding-left: 100px;
+  transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 750px) {
+    .game2 #game-percentage{display:none;}
+}
+
+.game3{
+  background-color: var(--background3);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+  width: 60%;
+  text-align: center;
+  font-family: Dubai;
+  font-size: 40px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+
+.game-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 300px));
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 0;
+  white-space: pre-line;
+  text-align: center;
+  place-items: center;
+  justify-content: center;
+}
+
+.game-grid-obj{
+  grid-template-columns: repeat(20px, 300px));
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+  background-color: var(--background2);
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0;
+  margin-top: 30px;
+  width: 300px;
+}
+
+.game-grid-obj #game-price{
+  font-weight: normal;
+  font-size: 25px;
+  color: #00b595;
+  background-color: #eaedde;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+  padding: 5px;
+  width: 80%;
+  cursor: pointer;
+  border: solid 1px;
+}
+
+.game-grid-obj #game-price:hover{
+  filter: drop-shadow(1.5px 1.5px 2px rgba(0, 181, 149, 0.6));
+}
+
+.game-grid-obj img{
+  position: relative;
+  padding: 0px;
+  width: 200px;
+}
+
+.game-grid-obj:hover{
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+footer button{
+  background: transparent;
+  padding: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 8px;
+  border: 1px solid var(--text);
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: LGC-light;
+  cursor: pointer;
+}
+
+footer button:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.01);
+}
+
+footer{
+  white-space: pre-line;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  margin-top: 40px;
+  font-size: 23px;
+  width: 100%;
+  font-family: LGC-light;
+}
+
+footer a{
+  color: var(--text);
+  text-decoration: none;
+}
+
+.privacy-policy{
+  margin-top: 30px;
+  font-size: 15px;
+  font-family: LGC-light;
+  color: var(--text);
+  text-decoration: none;
+}

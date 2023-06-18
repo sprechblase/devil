@@ -96,7 +96,7 @@ body{
 
 .grid-object{
   grid-template-columns: repeat(20px, 1fr));
-  transition: transform .25s ease-in-out;
+  transition: transform .25s;
 }
 
 .grid-object img{
@@ -110,7 +110,7 @@ body{
   width: 450px;
   height: auto;
   opacity: .9;
-  filter: drop-shadow(1px 1px 4px var(--text));
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
   transform: scale(1.015)
 }
 

@@ -21,3 +21,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
+let startamnt = 236000000000;
+let amnt = startamnt.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+
+function decreaseMoney(amount){
+  startamnt = startamnt - amount;
+  let amnt = startamnt.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+
+  document.getElementById('game-money').innerHTML = "$ " + amnt;
+  console.log(amnt);
+
+  document.getElementById('game-percentage').innerHTML = ((startamnt / 236000000000) * 100).toString().substring(0,6) + "%";
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById('game-money').innerHTML = "$ " + amnt;
+});
