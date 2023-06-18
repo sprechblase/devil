@@ -50,66 +50,18 @@ function toggleColoration(){
       console.log("Debug: darkmode");
       document.querySelector("html").toggleAttribute("data-dark-mode");
       setCookie('toggleDarkMode', "0", 7);
-      monkeyMode("refresh");
     }else{
       document.getElementById('lgo').src = "assets/data/img/logo1-scaled.png";
       console.log("Debug: whitemode");
       document.querySelector("html").toggleAttribute("data-dark-mode");
       setCookie('toggleDarkMode', "1", 7);
-      monkeyMode("refresh");
     }
-}
-
-function monkeyMode(func){
-  if(func == "toggle"){
-    if (getCookie('monkeyMode') == "0") {
-      if(getCookie('toggleDarkMode') == "0"){
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_darkmode.jpg')";
-        console.log("Debug: mnky mode dark");
-      }else{
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
-        console.log("Debug: mnky mode white");
-      }
-      setCookie("monkeyMode", "1", 7);
-    }else if(getCookie('monkeyMode') == "1"){
-      document.body.style.removeProperty('background-image');
-      setCookie("monkeyMode", "0", 7);
-    }else{
-      if(getCookie('toggleDarkMode') == "0"){
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_darkmode.jpg')";
-        console.log("Debug: mnky mode dark");
-      }else{
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
-        console.log("Debug: mnky mode white");
-      }
-      setCookie("monkeyMode", "1", 7);
-    }
-  }else if(func == "refresh"){
-    if(getCookie('monkeyMode') == "1"){
-      if(getCookie('toggleDarkMode') == "0"){
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_darkmode.jpg')";
-        console.log("Debug: mnky mode dark");
-      }else{
-        document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
-        console.log("Debug: mnky mode white");
-      }
-    }
-  }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
   if(getCookie('toggleDarkMode') == "0"){
       document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
       document.querySelector("html").toggleAttribute("data-dark-mode");
-      console.log("Debug: darkmode");
-      monkeyMode("refresh");
-  }else if(getCookie('monkeyMode') == "1"){
-    if(getCookie('toggleDarkMode') == "0"){
-      document.body.style.backgroundImage = "url('assets/data/img/mnky_darkmode.jpg')";
-      console.log("Debug: mnky mode dark");
-    }else{
-      document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
-      console.log("Debug: mnky mode white");
-    }
+      console.log("Debug: whitemode");
   }
 });
