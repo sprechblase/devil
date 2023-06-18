@@ -156,3 +156,25 @@ footer a{
   color: var(--text);
   text-decoration: none;
 }
+
+.easteregg{
+  position: absolute;
+  bottom: 0;
+}
+
+.easteregg button{
+  background: transparent;
+  padding: 2px;
+  margin: 8px;
+  margin-left: 50px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1px;
+  color: var(--background);
+  font-family: LGC-light;
+  cursor: default;
+}
+
+.easteregg button:hover{
+  box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+}
