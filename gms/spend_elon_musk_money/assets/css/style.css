@@ -133,7 +133,7 @@ body{
   transform: rotate(-10deg);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 955px) {
     .game2 #game-percentage{display:none;}
 }
 
@@ -147,7 +147,7 @@ body{
   text-align: center;
   font-family: Dubai;
   font-size: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-left: 50px;
   padding-right: 50px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;

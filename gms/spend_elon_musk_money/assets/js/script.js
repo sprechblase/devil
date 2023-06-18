@@ -31,7 +31,6 @@ function decreaseMoney(amount){
 
   document.getElementById('game-money').innerHTML = "$ " + amnt;
   console.log(amnt);
-
   document.getElementById('game-percentage').innerHTML = ((startamnt / 236000000000) * 100).toString().substring(0,6) + "%";
 }
 
