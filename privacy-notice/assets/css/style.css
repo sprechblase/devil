@@ -1,0 +1,79 @@
+/*
+MIT License
+
+Copyright (c) 2023 Samuel K
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+@font-face {
+  font-family: "LGC";
+  src: url("../data/fonts/Louis George Cafe/Louis George Cafe.ttf");
+}
+
+@font-face {
+  font-family: "LGC-light";
+  src: url("../data/fonts/Louis George Cafe/Louis George Cafe Light.ttf");
+}
+
+:root{
+  --text: #131801;
+  --background: #fdfff5;
+  --background2: #f1f3e9;
+  --background3: #eaedde;
+  --backgroundAccent: #f6f6f6;
+  --primary-button: #7855f7;
+  --secondary-button: #ffffff;
+  --accent: #380adb;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
+  font-family: LGC;
+  min-height: 100%;
+}
+
+.site-title{
+  margin-top: 20px;
+  font-size: 20px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.site-title img{
+  max-width: 100%;
+  width: 320px;
+  height: auto;
+}
+
+.box{
+  position: relative;
+  background-color: var(--background3);
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 60%;
+  text-align: center;
+  font-family: LGC-light;
+  font-size: 20px;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
