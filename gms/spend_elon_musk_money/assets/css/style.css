@@ -144,7 +144,7 @@ body{
   transform: rotate(-10deg);
 }
 
-@media screen and (max-width: 955px) {
+@media screen and (max-width: 1400px) {
     .game2 #game-percentage{display:none;}
 }
 

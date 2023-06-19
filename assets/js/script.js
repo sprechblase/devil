@@ -70,10 +70,10 @@ function monkeyMode(func){
         document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
         console.log("Debug: mnky mode white");
       }
-      setCookie("monkeyMode", "1", 7);
+      setCookie("monkeyMode", "1", 1);
     }else if(getCookie('monkeyMode') == "1"){
       document.body.style.removeProperty('background-image');
-      setCookie("monkeyMode", "0", 7);
+      setCookie("monkeyMode", "0", 1);
     }else{
       if(getCookie('toggleDarkMode') == "0"){
         document.body.style.backgroundImage = "url('assets/data/img/mnky_darkmode.jpg')";
@@ -82,7 +82,7 @@ function monkeyMode(func){
         document.body.style.backgroundImage = "url('assets/data/img/mnky_whitemode.jpg')";
         console.log("Debug: mnky mode white");
       }
-      setCookie("monkeyMode", "1", 7);
+      setCookie("monkeyMode", "1", 1);
     }
   }else if(func == "refresh"){
     if(getCookie('monkeyMode') == "1"){

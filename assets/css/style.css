@@ -178,3 +178,7 @@ footer a{
 .easteregg button:hover{
   box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
 }
+
+@media screen and (max-width: 1750px) {
+    .easteregg {display:none;}
+}
