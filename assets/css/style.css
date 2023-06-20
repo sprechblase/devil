@@ -157,7 +157,7 @@ footer a{
   text-decoration: none;
 }
 
-.easteregg{
+/* .easteregg{
   position: absolute;
   bottom: 0;
 }
@@ -181,4 +181,4 @@ footer a{
 
 @media screen and (max-width: 1750px) {
     .easteregg {display:none;}
-}
+} */
