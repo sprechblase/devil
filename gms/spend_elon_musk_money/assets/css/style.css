@@ -59,6 +59,7 @@ body{
   color: var(--text);
   font-family: LGC;
   min-height: 100%;
+  touch-action: manipulation;
 }
 
 .darkMode-button{
