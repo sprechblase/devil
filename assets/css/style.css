@@ -98,6 +98,7 @@ body{
 .grid-object{
   grid-template-columns: repeat(20px, 1fr));
   transition: transform .25s;
+  -webkit-transition: transform .25s;
 }
 
 .grid-object img{
@@ -112,7 +113,9 @@ body{
   height: auto;
   opacity: .9;
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-  transform: scale(1.015)
+  -webkit-transform: scale(1.015) !important;
+  transform: scale(1.015);
+  filter: grayscale(10%);
 }
 
 footer button{
