@@ -55,6 +55,7 @@ var ground = Bodies.rectangle(400, 1050, 2000, 200, {
     render: {
       sprite: {
           texture: "/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          // texture: "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
           xScale: 2,
           yScale: 0.45,
       }
@@ -88,8 +89,20 @@ function createBlock() {
         }
     }, 1000)
 
-    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80);
-    boxCurrent.render.fillStyle = "#f5c329";
+    var pics= ['block.png', 'block2.png', 'block3.png', 'block4.png'],
+    picnumber = Math.floor((Math.random() * pics.length));
+
+    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80, {
+      render: {
+        sprite: {
+          texture: "/gms/stack/assets/data/img/" + pics[picnumber],
+          // texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
+          xScale: .16,
+          yScale: .16,
+        }
+      },
+    });
+    // boxCurrent.render.fillStyle = "#131801";
     boxCurrent.frictionAir = 0;
     boxCurrent.restitution = 0;
     console.log(boxCurrent);
