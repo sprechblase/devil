@@ -124,11 +124,7 @@ function dropBlock() {
         x: 0,
         y: 0
     });
-    if (score <= 3) {
-      scoreDisplay.textContent = 'Score: ' + score;
-    }else {
-      scoreDisplay.textContent = 'Score: ' + score;
-    }
+    scoreDisplay.textContent = 'Score: ' + score;
 
     Events.on(engine, 'beforeTick', () => {
         if (box[boxIndex - 1].position.y - hangPoint[boxIndex - 1].position.y > 500) {
@@ -162,7 +158,7 @@ Events.on(engine, 'collisionStart', (e) => {
         gameOver();
     } else {
         if (secondDisplay.textContent > 0) {
-            timeOutID = setTimeout(createBlock, 500)
+            timeOutID = setTimeout(createBlock, 800)
         }
 
     }
@@ -172,11 +168,12 @@ Events.on(engine, 'collisionStart', (e) => {
 
 function gameOver() {
     box.forEach((i) => {
-        i.render.fillStyle = "red";
+        i.render.fillStyle = "#f42d29";
     })
     Game.style.filter = "blur(5px) brightness(95%)";
     document.getElementById("gameover").style.display = "inline";
     scoreDisplay.textContent = 'Score: ' + score;
+    secondDisplay.style.color = "#f42d29";
     clearInterval(intervalID);
     clearTimeout(timeOutID);
     document.body.removeEventListener('click', dropBlock)

@@ -98,7 +98,7 @@ body{
   border-radius: 30px;
   margin: auto;
   width: 80%;
-  height: 770px;
+  height: 755px;
   font-family: ARLRDBD;
   text-align:center;
   font-size: 45px;
@@ -108,12 +108,14 @@ body{
 
 .gamecanvas{
   text-align:center;
+  transform: scale(0.95);
 }
 
 @media screen and (max-width: 900px) {
     .gamecanvas{transform: scale(0.8); translate: 0 -10%;}
     .game{margin-bottom: 10px; height: 640px;}
 }
+
 @media screen and (max-width: 745px) {
     .gamecanvas{transform: scale(0.6); translate: 0 -20%;}
     .game{margin-bottom: 10px; height: 505px;}
@@ -130,6 +132,7 @@ body{
 @media screen and (max-width: 350px) {
   .gamecanvas{transform: scale(0.6) translate(-18%);}
 }
+
 @media screen and (max-width: 200px) {
   .gamecanvas{transform: scale(0.6) translate(-25%);}
 }
@@ -155,6 +158,10 @@ body{
   width: 100%;
 }
 
+#second{
+  color: #f5c329;
+}
+
 button{
   background: transparent;
   padding: 9px;
@@ -162,6 +169,7 @@ button{
   padding-right: 15px;
   margin: 8px;
   border: 1px solid var(--text);
+  color: var(--text);
   border-radius: 8px;
   font-size: 25px;
   font-family: LGC-light;
