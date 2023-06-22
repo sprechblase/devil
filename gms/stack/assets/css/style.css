@@ -96,6 +96,7 @@ body{
 .game{
   /* background-color: var(--background3); */
   background: linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%);
+  position: relative;
   border-radius: 30px;
   margin: auto;
   width: 80%;
@@ -182,6 +183,15 @@ body{
 }
 #score{
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+#highscore{
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 25px;
+  background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 button{

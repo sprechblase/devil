@@ -54,8 +54,8 @@ var ground = Bodies.rectangle(400, 1050, 2000, 200, {
     isStatic: true,
     render: {
       sprite: {
-          texture: "/gms/stack/assets/data/img/StoneFloorTexture.jpg",
-          // texture: "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          // texture: "/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          texture: "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
           xScale: 2,
           yScale: 0.45,
       }
@@ -111,8 +111,8 @@ function createBlock() {
     let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80, {
       render: {
         sprite: {
-          texture: "/gms/stack/assets/data/img/" + pics[picnumber],
-          // texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
+          // texture: "/gms/stack/assets/data/img/" + pics[picnumber],
+          texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
           xScale: .16,
           yScale: .16,
         }
