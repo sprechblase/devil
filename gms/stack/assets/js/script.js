@@ -30,7 +30,7 @@ var Engine = Matter.Engine,
     Body = Matter.Body,
     Events = Matter.Events,
     Bounds = Matter.Bounds,
-    Game = document.getElementById("game"),
+    Game = document.getElementById("gamecanvas"),
     Pair = Matter.Pair;
 
 var engine = Engine.create();

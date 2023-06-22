@@ -97,26 +97,52 @@ body{
   background-color: var(--background3);
   border-radius: 30px;
   margin: auto;
-  margin-bottom: 30px;
-  width: 60%;
-  height: 90px;
-  text-align: center;
+  width: 80%;
+  height: 770px;
   font-family: ARLRDBD;
+  text-align:center;
   font-size: 45px;
-  padding-top: 80px;
-  padding-bottom: 680px;
+  padding-top: 30px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
+.gamecanvas{
+  text-align:center;
+}
+
+@media screen and (max-width: 900px) {
+    .gamecanvas{transform: scale(0.8); translate: 0 -10%;}
+    .game{margin-bottom: 10px; height: 640px;}
+}
+@media screen and (max-width: 745px) {
+    .gamecanvas{transform: scale(0.6); translate: 0 -20%;}
+    .game{margin-bottom: 10px; height: 505px;}
+}
+
+@media screen and (max-width: 450px) {
+  .gamecanvas{transform: scale(0.6) translate(-5%);}
+}
+
+@media screen and (max-width: 400px) {
+  .gamecanvas{transform: scale(0.6) translate(-10%);}
+}
+
+@media screen and (max-width: 350px) {
+  .gamecanvas{transform: scale(0.6) translate(-18%);}
+}
+@media screen and (max-width: 200px) {
+  .gamecanvas{transform: scale(0.6) translate(-25%);}
+}
+
 .gameover{
-  margin-top: 80px;
+  margin-top: 150px;
   z-index: 10;
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 50%;
   text-align: center;
   font-family: ARLRDBD;
   display: none;
