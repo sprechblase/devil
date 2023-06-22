@@ -41,7 +41,7 @@ var render = Render.create({
     options: {
         width: 375,
         height: 667,
-        background: '#eaedde',
+        background: 'transparent',
         wireframes: false,
         hasBounds: true,
     }
@@ -85,7 +85,7 @@ function createBlock() {
     }, 1000)
 
     let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80);
-    boxCurrent.render.fillStyle = "#131801";
+    boxCurrent.render.fillStyle = "#f5c329";
     boxCurrent.frictionAir = 0;
     boxCurrent.restitution = 0;
     console.log(boxCurrent);
@@ -171,6 +171,8 @@ function gameOver() {
         i.render.fillStyle = "#f42d29";
     })
     Game.style.filter = "blur(5px) brightness(95%)";
+    document.getElementById("cloud1").style.filter = "blur(5px) brightness(95%)";
+    document.getElementById("cloud2").style.filter = "blur(5px) brightness(95%)";
     document.getElementById("gameover").style.display = "inline";
     scoreDisplay.textContent = 'Score: ' + score;
     secondDisplay.style.color = "#f42d29";

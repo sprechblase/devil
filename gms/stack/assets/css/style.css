@@ -94,7 +94,8 @@ body{
 }
 
 .game{
-  background-color: var(--background3);
+  /* background-color: var(--background3); */
+  background: linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%);
   border-radius: 30px;
   margin: auto;
   width: 80%;
@@ -106,6 +107,20 @@ body{
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
+#cloud1{
+  position:absolute;
+  width: 20%;
+  height: auto;
+}
+
+#cloud2{
+  position:absolute;
+  width: 30%;
+  height: auto;
+  left: 150px;
+  top: 250px;
+}
+
 .gamecanvas{
   text-align:center;
   transform: scale(0.95);
@@ -114,6 +129,7 @@ body{
 @media screen and (max-width: 900px) {
     .gamecanvas{transform: scale(0.8); translate: 0 -10%;}
     .game{margin-bottom: 10px; height: 640px;}
+    #cloud1, #cloud2{display: none};
 }
 
 @media screen and (max-width: 745px) {
@@ -160,6 +176,10 @@ body{
 
 #second{
   color: #f5c329;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+#score{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
 button{
