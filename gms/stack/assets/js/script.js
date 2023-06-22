@@ -54,7 +54,7 @@ var ground = Bodies.rectangle(400, 1050, 2000, 200, {
     isStatic: true,
     render: {
       sprite: {
-          texture: "file:///C:/Users/Busin/Documents/GitHub/devil/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          texture: "/gms/stack/assets/data/img/StoneFloorTexture.jpg",
           xScale: 2,
           yScale: 0.45,
       }
