@@ -75,6 +75,22 @@ var hangPointCurrentHeight = 500;
 var scoreDisplay = document.getElementById("score")
 var secondDisplay = document.getElementById("second")
 
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+preload(
+    "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+    "https://devil.pm/gms/stack/assets/data/img/block.png",
+    "https://devil.pm/gms/stack/assets/data/img/block2.png",
+    "https://devil.pm/gms/stack/assets/data/img/block3.png",
+    "https://devil.pm/gms/stack/assets/data/img/block4.png"
+)
+
 function createBlock() {
     if (timeOutID) {
         clearTimeout(timeOutID);
