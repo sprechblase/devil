@@ -53,7 +53,11 @@ console.log(render.bounds)
 var ground = Bodies.rectangle(400, 1050, 2000, 200, {
     isStatic: true,
     render: {
-     fillStyle: '#131801'
+      sprite: {
+          texture: "file:///C:/Users/Busin/Documents/GitHub/devil/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          xScale: 2,
+          yScale: 0.45,
+      }
     },
 });
 

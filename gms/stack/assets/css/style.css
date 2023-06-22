@@ -111,6 +111,7 @@ body{
   position:absolute;
   width: 20%;
   height: auto;
+  filter: blur(2px);
 }
 
 #cloud2{
@@ -119,6 +120,7 @@ body{
   height: auto;
   left: 150px;
   top: 250px;
+  filter: blur(2px);
 }
 
 .gamecanvas{
