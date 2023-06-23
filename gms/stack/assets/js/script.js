@@ -72,8 +72,10 @@ var hangPoint = [];
 var constraint;
 var boxIndex = 0;
 var hangPointCurrentHeight = 500;
-var scoreDisplay = document.getElementById("score")
-var secondDisplay = document.getElementById("second")
+var scoreDisplay = document.getElementById("score");
+var secondDisplay = document.getElementById("second");
+var highscoreDisplay = document.getElementById("highscore");
+var highscore = localStorage.getItem("HighScore");
 
 var images = [];
 function preload() {
@@ -88,8 +90,12 @@ preload(
     "https://devil.pm/gms/stack/assets/data/img/block.png",
     "https://devil.pm/gms/stack/assets/data/img/block2.png",
     "https://devil.pm/gms/stack/assets/data/img/block3.png",
-    "https://devil.pm/gms/stack/assets/data/img/block4.png"
+    "https://devil.pm/gms/stack/assets/data/img/block4.png",
+    "https://devil.pm/gms/stack/assets/data/img/block5.png",
+    "https://devil.pm/gms/stack/assets/data/img/block6.png"
 )
+
+if(highscore == null){highscoreDisplay.textContent = 'Highscore: 0';}else{highscoreDisplay.textContent = 'Highscore: ' + highscore;}
 
 function createBlock() {
     if (timeOutID) {
@@ -105,7 +111,7 @@ function createBlock() {
         }
     }, 1000)
 
-    var pics= ['block.png', 'block2.png', 'block3.png', 'block4.png'],
+    var pics= ['block.png', 'block2.png', 'block3.png', 'block4.png', 'block5.png', 'block6.png'],
     picnumber = Math.floor((Math.random() * pics.length));
 
     let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80, {
@@ -191,7 +197,7 @@ Events.on(engine, 'collisionStart', (e) => {
         gameOver();
     } else {
         if (secondDisplay.textContent > 0) {
-            timeOutID = setTimeout(createBlock, 800)
+            timeOutID = setTimeout(createBlock, 1000)
         }
 
     }
@@ -212,4 +218,12 @@ function gameOver() {
     clearInterval(intervalID);
     clearTimeout(timeOutID);
     document.body.removeEventListener('click', dropBlock)
+
+    if(highscore == null){
+      localStorage.setItem("HighScore", score);
+      highscoreDisplay.textContent = 'Highscore: ' + score;
+    }else if(highscore < score){
+      localStorage.setItem("HighScore", score);
+      highscoreDisplay.textContent = 'Highscore: ' + score;
+    }
 }

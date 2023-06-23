@@ -129,10 +129,11 @@ body{
   transform: scale(0.95);
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .gamecanvas{transform: scale(0.8); translate: 0 -10%;}
     .game{margin-bottom: 10px; height: 640px;}
-    #cloud1, #cloud2{display: none};
+    #cloud1, #cloud2{display: none}
+    #highscore{font-size: 10px}
 }
 
 @media screen and (max-width: 745px) {
@@ -154,10 +155,10 @@ body{
 
 @media screen and (max-width: 200px) {
   .gamecanvas{transform: scale(0.6) translate(-25%);}
-}
+} */
 
 .gameover{
-  margin-top: 150px;
+  margin-top: 180px;
   z-index: 10;
   position: absolute;
   left: 0;
@@ -186,10 +187,12 @@ body{
 }
 #highscore{
   position: absolute;
-  top: 40px;
-  right: 20px;
-  font-size: 25px;
-  background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%); 
+  top: 145px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 23px;
+  z-index: 10;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
