@@ -32,6 +32,9 @@ function decreaseMoney(amount){
   document.getElementById('game-money').innerHTML = "$ " + amnt;
   console.log(amnt);
   document.getElementById('game-percentage').innerHTML = ((startamnt / 236000000000) * 100).toString().substring(0,6) + "%";
+  if(startamnt < 1){
+    document.getElementById('game2').style.background = "radial-gradient(circle at 0.2% 1.8%, rgb(255, 90, 8) 0%, rgb(88, 0, 0) 100.2%)";
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
