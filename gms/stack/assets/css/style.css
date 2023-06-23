@@ -62,13 +62,21 @@ body{
   touch-action: manipulation;
 }
 
-.darkMode-button{
+.music-switch{
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
   color: var(--text);
   transition: 1s;
+}
+
+#musicOn{
+  display: none;
+}
+
+#musicOff{
+  display: inline;
 }
 
 .site-title{
@@ -129,7 +137,7 @@ body{
   transform: scale(0.95);
 }
 
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .gamecanvas{transform: scale(0.8); translate: 0 -10%;}
     .game{margin-bottom: 10px; height: 640px;}
     #cloud1, #cloud2{display: none}
@@ -155,7 +163,7 @@ body{
 
 @media screen and (max-width: 200px) {
   .gamecanvas{transform: scale(0.6) translate(-25%);}
-} */
+}
 
 .gameover{
   margin-top: 180px;

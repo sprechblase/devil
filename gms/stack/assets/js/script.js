@@ -22,6 +22,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+
+var music = {
+  background: new Howl({
+    src: ['./assets/data/sounds/background.mp3'],
+    html5: true
+  })
+}
+
+function musicSwitch(){
+  if (music.background.playing()) {
+    music.background.stop();
+    document.getElementById("musicOff").style.display = "inline";
+    document.getElementById("musicOn").style.display = "none";
+  }else{
+    music.background.play();
+    document.getElementById("musicOn").style.display = "inline";
+    document.getElementById("musicOff").style.display = "none";
+  }
+}
+
 var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
@@ -114,13 +134,13 @@ function createBlock() {
     var pics= ['block.png', 'block2.png', 'block3.png', 'block4.png', 'block5.png', 'block6.png'],
     picnumber = Math.floor((Math.random() * pics.length));
 
-    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 90, 90, {
+    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80, {
       render: {
         sprite: {
           // texture: "/gms/stack/assets/data/img/" + pics[picnumber],
           texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
-          xScale: .184,
-          yScale: .184,
+          xScale: .162,
+          yScale: .162,
         }
       },
     });
@@ -177,7 +197,7 @@ function dropBlock() {
 
 createBlock();
 
-var clickListener = document.body.addEventListener('click', dropBlock);
+var clickListener = document.getElementById("game").addEventListener('click', dropBlock);
 
 
 Engine.run(engine);
