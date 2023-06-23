@@ -114,13 +114,13 @@ function createBlock() {
     var pics= ['block.png', 'block2.png', 'block3.png', 'block4.png', 'block5.png', 'block6.png'],
     picnumber = Math.floor((Math.random() * pics.length));
 
-    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 80, 80, {
+    let boxCurrent = Bodies.rectangle(300, hangPointCurrentHeight, 95, 95, {
       render: {
         sprite: {
           // texture: "/gms/stack/assets/data/img/" + pics[picnumber],
           texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
-          xScale: .16,
-          yScale: .16,
+          xScale: .196,
+          yScale: .196,
         }
       },
     });
@@ -192,14 +192,15 @@ Events.on(engine, 'collisionStart', (e) => {
 
     if (groundHit) {
         hitGround++;
+        console.log("1 - " + e.pairs[0].bodyA.isStatic);
     }
     if (hitGround > 1) {
         gameOver();
     } else {
         if (secondDisplay.textContent > 0) {
-            timeOutID = setTimeout(createBlock, 1000)
+            timeOutID = setTimeout(createBlock, 1000);
         }
-
+        console.log("3 - " + e.pairs[0].bodyA.isStatic);
     }
 
 })
