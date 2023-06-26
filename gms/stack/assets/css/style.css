@@ -84,7 +84,7 @@ body{
   height: 70px;
   width: 100%;
   overflow: hidden;
-  background: var(--background3);
+  background: linear-gradient(to bottom, #94c5f8 1%,#9cd4fb 70%,#a5e4ff 100%);
   margin-bottom: 50px;
 }
 
