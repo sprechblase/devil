@@ -33,14 +33,32 @@ SOFTWARE.
 }
 
 @font-face {
-  font-family: "Dubai";
-  src: url("../data/fonts/Dubai/DUBAI-REGULAR.TTF");
+  font-family: "IBMPlexSans";
+  font-weight: regular;
+  src: url("../data/fonts/IBMPlexSans/IBMPlexSans-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Dubai";
+  font-family: "IBMPlexSans";
+  font-weight: semibold;
+  src: url("../data/fonts/IBMPlexSans/IBMPlexSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
   font-weight: bold;
-  src: url("../data/fonts/Dubai/DUBAI-BOLD.TTF");
+  src: url("../data/fonts/IBMPlexSans/IBMPlexSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
+  font-weight: light;
+  src: url("../data/fonts/IBMPlexSans/IBMPlexSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Condensed";
+  src: url("../data/fonts/IBMPlexSans-Condensed/IBMPlexSansCondensed-Bold.ttf");
 }
 
 :root{
@@ -70,6 +88,8 @@ body{
 .site-title{
   font-size: 20px;
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .site-title img{
@@ -80,10 +100,33 @@ body{
 }
 .site-title img:hover{
   filter: drop-shadow(1px 1px 3px rgba(232, 233, 226, 0.7));
-  transform: scale(1.03);
+  transform: scale(1.035);
 }
 
+.game{
+  background: url("../data/img/repeat.png") repeat 0 0;
+  position: relative;
+  border-radius: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  width: 80%;
+  height: 755px;
+  text-align: center;
+  box-shadow: rgba(232, 233, 226, 0.075) 3px 3px 10px;
+}
 
+.game h1{
+  font-family: IBMPlexSans;
+  font-weight: bold;
+  font-size: 40px;
+}
+.game p{
+  font-family: IBMPlexSans;
+  font-weight: light;
+  font-size: 20px;
+  white-space: pre-line;
+}
 
 footer button{
   background: transparent;

@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://devil.pm</loc>
-		<lastmod>2023-06-24T18:27:20+01:00</lastmod>
+		<lastmod>2023-07-01T22:21:50+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://devil.pm/gms/spend_elon_musk_money</loc>
-		<lastmod>2023-06-24T18:27:20+01:00</lastmod>
+		<lastmod>2023-07-01T22:21:50+01:00</lastmod>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://devil.pm/gms/stack</loc>
-		<lastmod>2023-06-24T18:27:20+01:00</lastmod>
+		<lastmod>2023-07-01T22:21:50+01:00</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://devil.pm/gms/chromasync</loc>
+		<lastmod>2023-07-01T22:21:50+01:00</lastmod>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://devil.pm/privacy-notice</loc>
-		<lastmod>2023-06-24T18:27:20+01:00</lastmod>
+		<lastmod>2023-07-01T22:21:50+01:00</lastmod>
 		<priority>0.2</priority>
 	</url>
 </urlset>
