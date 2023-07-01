@@ -1,0 +1,132 @@
+/*
+MIT License
+
+Copyright (c) 2023 Samuel Krebs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+@font-face {
+  font-family: "LGC";
+  src: url("../../../../assets/data/fonts/Louis George Cafe/Louis George Cafe.ttf");
+}
+
+@font-face {
+  font-family: "LGC-light";
+  src: url("../../../../assets/data/fonts/Louis George Cafe/Louis George Cafe Light.ttf");
+}
+
+@font-face {
+  font-family: "Dubai";
+  src: url("../data/fonts/Dubai/DUBAI-REGULAR.TTF");
+}
+
+@font-face {
+  font-family: "Dubai";
+  font-weight: bold;
+  src: url("../data/fonts/Dubai/DUBAI-BOLD.TTF");
+}
+
+:root{
+  --text: #e8e9e2;
+  --background: #060606;
+  --background2: #0f0f0f;
+  --background3: #1d1d1d;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
+  font-family: LGC;
+  min-height: 100%;
+  touch-action: manipulation;
+}
+
+.darkMode-button{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: var(--text);
+  transition: 1s;
+}
+
+.site-title{
+  font-size: 20px;
+  text-align: center;
+}
+
+.site-title img{
+  max-width: 100%;
+  width: 210px;
+  height: auto;
+  transition: .3s;
+}
+.site-title img:hover{
+  filter: drop-shadow(1px 1px 3px rgba(232, 233, 226, 0.7));
+  transform: scale(1.03);
+}
+
+
+
+footer button{
+  background: transparent;
+  padding: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 8px;
+  border: 1px solid var(--text);
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: LGC-light;
+  cursor: pointer;
+}
+
+footer button:hover{
+  box-shadow: rgba(232, 233, 226, 0.44) 0px 3px 8px;
+  transform: scale(1.01);
+}
+
+footer{
+  white-space: pre-line;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  margin-top: 40px;
+  font-size: 23px;
+  width: 100%;
+  font-family: LGC-light;
+}
+
+footer a{
+  color: var(--text);
+  text-decoration: none;
+}
+
+footer img{
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+  transition: .3s;
+  margin-top: 10px;
+}
+footer img:hover{
+  filter: drop-shadow(1px 1px 3px rgba(232, 233, 226, 0.7));
+  transform: scale(1.025);
+}
