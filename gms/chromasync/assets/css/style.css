@@ -111,9 +111,10 @@ body{
   border-radius: 30px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 30px;
-  width: 65%;
-  height: 755px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  width: 67%;
   text-align: center;
   box-shadow: rgba(232, 233, 226, 0.075) 3px 3px 10px;
   border: 3px solid var(--background3);
@@ -123,12 +124,14 @@ body{
   font-family: IBMPlexSans;
   font-weight: bold;
   font-size: 50px;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4);
 }
 .game p{
   font-family: IBMPlexSans;
   font-weight: light;
   font-size: 20px;
   white-space: pre-line;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
 }
 
 .game #highscore{
@@ -144,10 +147,11 @@ body{
   height: 24vw;
   padding: 30px;
   margin-top: 15px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  float: left;
+  margin: 10px;
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
 }
 
 .game .color-input{
@@ -174,7 +178,7 @@ body{
   width: 7vw;
   height: 7vw;
   cursor: cell;
-  margin-top: 4.5vw;
+  margin-top: 2.5vw;
 }
 
 .game #checkSync{
@@ -188,6 +192,7 @@ body{
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 1.5vw;
 }
 
 .game .color{
@@ -197,10 +202,11 @@ body{
   height: 24vw;
   padding: 30px;
   margin-top: 15px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  float: right;
+  margin: 10px;
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
 }
 
 .game .color #colorbox{
