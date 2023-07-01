@@ -66,6 +66,7 @@ SOFTWARE.
   --background: #060606;
   --background2: #0f0f0f;
   --background3: #1d1d1d;
+  --accent: #fb6e52;
 }
 
 body{
@@ -104,28 +105,110 @@ body{
 }
 
 .game{
+  background-color: var(--background2);
   background: url("../data/img/repeat.png") repeat 0 0;
   position: relative;
   border-radius: 30px;
   left: 50%;
   transform: translateX(-50%);
   padding: 30px;
-  width: 80%;
+  width: 65%;
   height: 755px;
   text-align: center;
   box-shadow: rgba(232, 233, 226, 0.075) 3px 3px 10px;
+  border: 3px solid var(--background3);
 }
 
 .game h1{
   font-family: IBMPlexSans;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
 }
 .game p{
   font-family: IBMPlexSans;
   font-weight: light;
   font-size: 20px;
   white-space: pre-line;
+}
+
+.game #highscore{
+  font-family: IBMPlexSans-Condensed;
+  font-size: 2vw;
+  white-space: pre-line;
+}
+
+.game .controls{
+  background-color: var(--background3);
+  border-radius: 20px;
+  width: 30%;
+  height: 24vw;
+  padding: 30px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  float: left;
+}
+
+.game .color-input{
+  position: relative;
+	margin: auto;
+}
+
+.game .color-input img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7vw;
+  height: auto;
+  pointer-events: none;
+  margin-top: 2.5vw;
+}
+
+.game .color-input #colorPicker{
+  position: relative;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 7vw;
+  height: 7vw;
+  cursor: cell;
+  margin-top: 4.5vw;
+}
+
+.game #checkSync{
+  width: 13vw;
+  height: 8vw;
+  font-family: IBMPlexSans;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: white;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.game .color{
+  background-color: var(--background3);
+  border-radius: 20px;
+  width: 35vw;
+  height: 24vw;
+  padding: 30px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  float: right;
+}
+
+.game .color #colorbox{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: red;
+  border: 4px solid var(--background2);
 }
 
 footer button{
