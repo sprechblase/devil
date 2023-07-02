@@ -42,11 +42,14 @@
     </div>
     <div class="game">
       <h1>Chroma Sync</h1>
-      <p>Synchronize the colors as good as possible, aim for perfection and earn a whopping 1000 points.
+      <p>Synchronize the colors within 6 rounds as good as possible, aim for perfection and earn a whopping 1000 points.
         Your points will be determined by your ability to match the displayed color.</p>
       <div class="controls">
         <div id="highscore">Highscore:
           0</div>
+        <div id="msg">
+          &zwnj;<!-- Are you colorblind? Try again. (31.70% Match) -->
+        </div>
         <div class="color-input">
           <input id="colorPicker" type="color">
           <img src="assets/data/img/color-picker.png">
@@ -56,6 +59,7 @@
         </button>
       </div>
       <div class="color">
+        <span id="roundCount">0/6</span>
         <div id="colorBox"></div>
       </div>
     </div>
