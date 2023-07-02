@@ -55,7 +55,7 @@ window.onload = () => {
     const distance = Math.sqrt(Math.pow(targetRgb.r - pickedRgb.r, 2) + Math.pow(targetRgb.g - pickedRgb.g, 2) + Math.pow(targetRgb.b - pickedRgb.b, 2));
     const roundScore = Math.max(0, Math.round((1 - distance / Math.sqrt(3 * Math.pow(255, 2))) * 1000));
     highScore += roundScore;
-    highScoreElement.textContent = "Highscore: \n" + highScore;
+    highScoreElement.textContent = "TOTALSCORE: \n" + highScore;
     const perc = ((roundScore / 1000) * 100).toFixed(2);
 
     if(perc == 100){
@@ -85,7 +85,7 @@ window.onload = () => {
       checkSync.disabled = true;
       checkSync.style.backgroundColor = "#909193";
       document.getElementById('msg').style.color = "#d5d224";
-      document.getElementById('msg').textContent = 'Good job! Refresh to start over again';
+      document.getElementById('msg').textContent = 'Good job! Refresh to start over again (' + ((highScore / 6000) * 100).toFixed(2) + '%)';
     }
   });
 }
