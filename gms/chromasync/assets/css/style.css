@@ -134,7 +134,7 @@ body{
   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
 }
 
-.game #highscore{
+.game #totalscore{
   font-family: IBMPlexSans-Condensed;
   font-size: 2vw;
   white-space: pre-line;
@@ -166,10 +166,12 @@ body{
   margin-top: 0.5vw;
   font-size: 0.82vw;
   color: var(--accent);
+  pointer-events: none;
 }
 
 .game #msg #perc{
   color: var(--text);
+  pointer-events: none;
 }
 
 .game .color-input img{
@@ -234,6 +236,21 @@ body{
   top: 0;
   padding-top: 40px;
   padding-right: 35px;
+  pointer-events: none;
+}
+
+.game #highScore{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 5px;
+  padding-right: 30px;
+  color: var(--background3);
+  font-family: IBMPlexSans;
+  font-weight: bold;
+  font-size: 19px;
+  text-shadow: 0.5px 0.5px 5px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
 .game .color #colorBox{

@@ -22,10 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 window.onload = () => {
-  const highScoreElement = document.getElementById('highscore');
+  const highScoreElement = document.getElementById('totalscore');
   const checkSync = document.getElementById('checkSync');
   const colorPicker = document.getElementById('colorPicker');
   const colorBox = document.querySelector("#colorBox");
+  var localHighScore = localStorage.getItem("localHighScore");
 
   function hexToRgb(hex) {
   	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -42,6 +43,11 @@ window.onload = () => {
   let round = 1;
   let targetColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
   colorBox.style.backgroundColor = targetColor;
+  if(localHighScore == null){
+    document.getElementById('highScore').textContent = "HIGHSCORE: 0"
+  }else{
+    document.getElementById('highScore').textContent = "HIGHSCORE: " + localHighScore;
+  }
 
   colorPicker.addEventListener("input", () => {
   	checkSync.style.backgroundColor = colorPicker.value.toUpperCase();
@@ -57,6 +63,11 @@ window.onload = () => {
     highScore += roundScore;
     highScoreElement.textContent = "TOTALSCORE: \n" + highScore;
     const perc = ((roundScore / 1000) * 100).toFixed(2);
+
+    if(localHighScore < highScore){
+      localStorage.setItem("localHighScore", highScore);
+      document.getElementById('highScore').textContent = "HIGHSCORE: " + highScore;
+    }
 
     if(perc == 100){
       document.getElementById('msg').textContent = "Wow! You've matched it perfectly. (" + perc + "%)";
