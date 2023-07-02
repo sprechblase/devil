@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
 window.onload = () => {
   const highScoreElement = document.getElementById('totalscore');
   const checkSync = document.getElementById('checkSync');
@@ -72,6 +73,9 @@ window.onload = () => {
     if(perc == 100){
       document.getElementById('msg').textContent = "Wow! You've matched it perfectly. (" + perc + "%)";
       document.getElementById('msg').style.color = "#26ab2b";
+    }else if(perc > 92){
+      document.getElementById('msg').textContent = "You are so close!! Try again. (" + perc + "%)";
+      document.getElementById('msg').style.color = "#acb334";
     }else if(perc > 80){
       document.getElementById('msg').textContent = "Pretty good! Try again. (" + perc + "%)";
       document.getElementById('msg').style.color = "#fab733";
