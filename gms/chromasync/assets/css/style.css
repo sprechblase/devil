@@ -183,6 +183,8 @@ body{
   height: auto;
   pointer-events: none;
   margin-top: 2vw;
+  filter: drop-shadow(1.5px 1.5px 8px var(--background2));
+  transition: .3s;
 }
 
 .game .color-input #colorPicker{
@@ -212,6 +214,12 @@ body{
 
 .game #checkSync h2{
   mix-blend-mode: difference;
+}
+
+.game #checkSync:disabled{
+  background-color: #909193;
+  border: 1px solid red;
+  color: red;
 }
 
 .game .color{
@@ -245,7 +253,7 @@ body{
   top: 0;
   padding-top: 5px;
   padding-right: 30px;
-  color: var(--background3);
+  color: #333333;
   font-family: IBMPlexSans;
   font-weight: bold;
   font-size: 19px;
@@ -272,11 +280,6 @@ footer button{
   font-size: 25px;
   font-family: LGC-light;
   cursor: pointer;
-}
-
-footer button:hover{
-  box-shadow: rgba(232, 233, 226, 0.44) 0px 3px 8px;
-  transform: scale(1.01);
 }
 
 footer{

@@ -98,7 +98,6 @@ window.onload = () => {
 
     if(round > 6){
       checkSync.disabled = true;
-      checkSync.style.backgroundColor = "#909193";
       document.getElementById('msg').style.color = "#d5d224";
       document.getElementById('msg').textContent = 'Good job! Refresh to start over again (' + ((highScore / 6000) * 100).toFixed(2) + '%)';
     }
