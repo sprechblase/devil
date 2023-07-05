@@ -32,7 +32,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://devil.pm/gms/chromasync/">
-    <meta property="twitter:title" content="devil's Page — Chroma Syn">
+    <meta property="twitter:title" content="devil's Page — Chroma Sync">
     <meta property="twitter:description" content="Can you match the colors or are you colorblind? Sadge">
     <meta property="twitter:image" content="https://devil.pm/gms/stack/assets/data/img/meta-tags.png">
   </head>
@@ -43,14 +43,9 @@
     <div class="game">
       <span id="highScore">HIGHSCORE: 0</span>
       <h1>Chroma Sync</h1>
-      <p>Synchronize the colors within 3 rounds as good as possible, aim for perfection and earn a whopping 1000 points.
-        Your points will be determined by your ability to match the displayed color.</p>
-      <div class="controls">
-        <div id="totalscore">TOTALSCORE:
-          0</div>
-        <div id="msg">
-          &zwnj;<!-- Are you colorblind? Try again. (31.70% Match) -->
-        </div>
+      <p>Synchronize the color as good as possible.</p>
+      <div class="controls" id="colorBox">
+        <div id="totalscore">0%</div>
         <div class="color-input">
           <input id="colorPicker" type="color">
           <img src="assets/data/img/color-picker.png">
@@ -58,10 +53,9 @@
         <button id="checkSync">
           <h2>Check Sync</h2>
         </button>
-      </div>
-      <div class="color">
-        <span id="roundCount">0/3</span>
-        <div id="colorBox"></div>
+        <button id="restart" onclick="location.reload()">
+          <h2>Restart</h2>
+        </button>
       </div>
     </div>
   </body>
