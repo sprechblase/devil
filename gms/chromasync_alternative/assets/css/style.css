@@ -216,8 +216,9 @@ body{
   border: 4px solid var(--background2);
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 4.5vw;
+  margin-top: 7.5vw;
   display: none;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
 }
 
 .game #highScore{
@@ -229,7 +230,7 @@ body{
   color: #333333;
   font-family: IBMPlexSans;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 21px;
   text-shadow: 0.5px 0.5px 5px rgba(255, 255, 255, 0.05);
   pointer-events: none;
 }
@@ -243,8 +244,8 @@ body{
 
 @media screen and (max-width: 1400px) {
   .game .controls{height: 60vw;}
-  .game #checkSync{width: 28vw; height: 14vw; font-size: 2.6vw; margin-top: 9vw;}
-  .game #restart{width: 28vw; height: 14vw; font-size: 2.6vw; margin-top: 9vw;}
+  .game #checkSync{width: 28vw; height: 14vw; font-size: 2.6vw; margin-top: 9vw; border: 2px solid var(--background2);}
+  .game #restart{width: 28vw; height: 14vw; font-size: 2.6vw; margin-top: 13vw;}
   .game .color-input #colorPicker{width: 15vw; height: 15vw; margin-top: 7vw;}
   .game .color-input img{width: 15vw; height: auto; margin-top: 7vw;}
   .game #totalscore{font-size: 6vw;}
@@ -253,7 +254,7 @@ body{
 @media screen and (max-width: 900px) {
   .game .controls{height: 75vw;}
   .game #checkSync{width: 35vw; height: 18vw; font-size: 3vw; margin-top: 12vw;}
-  .game #restart{width: 35vw; height: 18vw; font-size: 2.6vw; margin-top: 12vw;}
+  .game #restart{width: 35vw; height: 18vw; font-size: 2.6vw; margin-top: 20vw;}
   .game .color-input #colorPicker{width: 22vw; height: 22vw; margin-top: 10vw;}
   .game .color-input img{width: 22vw; height: auto; margin-top: 10vw;}
   .game #totalscore{font-size: 7vw;}
