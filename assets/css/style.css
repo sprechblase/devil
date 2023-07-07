@@ -34,23 +34,25 @@ SOFTWARE.
 
 :root{
   --text: #131801;
+  --textRGB: 19, 24, 1;
   --background: #fdfff5;
   --background2: #f1f3e9;
   --background3: #eaedde;
   --backgroundAccent: #f6f6f6;
   --primary-button: #7855f7;
   --secondary-button: #ffffff;
-  --accent: #380adb;
+  --accent: #674ebc;
 }
 
 [data-dark-mode]{
   --text: #e8e9e2;
+  --textRGB: 232, 233, 226;
   --background: #11110d;
   --background2: #1c1c18;
   --backgroundAccent: #131310;
   --primary-button: #434054;
   --secondary-button: #060604;
-  --accent: #434054;
+  --accent: #674ebc;
 }
 
 body{
@@ -61,14 +63,129 @@ body{
   touch-action: manipulation;
 }
 
-.darkMode-button{
+/* SETTINGS */
+
+.settings .label .settings-label-icons{
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 7px;
+  top: 7px;
+  border: 1.9px solid var(--text);
+  border-radius: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 6px;
+  padding-right: 6px;
   cursor: pointer;
-  color: var(--text);
-  transition: 1s;
+  transition: .5s;
 }
+
+.settings .label .settings-label-icons:hover{
+  box-shadow: var(--text) 0px 3px 8px;
+}
+
+.settings .label .settings-down{
+  padding-left: 4px;
+  display: none;
+  transition: .5s;
+}
+
+.settings .label .settings-label-icons:hover .settings-down{
+  display: inline-block;
+}
+
+.settings #dropdown{
+  display: none;
+  position: absolute;
+  right: 7px;
+  top: 60px;
+  background-color: var(--background);
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
+}
+
+.settings #dropdown hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* SWITCH */
+
+.settings #dropdown .switch{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.settings #dropdown .switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings #dropdown .slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background3);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.settings #dropdown .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.settings #dropdown input:checked + .slider {
+  background-color: var(--accent);
+}
+
+.settings #dropdown input:focus + .slider {
+  box-shadow: 0 0 1px var(--accent);
+}
+
+.settings #dropdown input:checked + .slider:before {
+  transform: translateX(46px);
+}
+
+.settings #dropdown .switch-container{
+  position: relative;
+}
+
+.settings #dropdown .switch-container #switch-white{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: var(--accent);
+}
+
+.settings #dropdown .switch-container #switch-dark{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: var(--accent);
+}
+
+/*  */
+
+/* SITE TITLE */
 
 .site-title{
   margin-top: 20px;
@@ -82,6 +199,10 @@ body{
   width: 320px;
   height: auto;
 }
+
+/*  */
+
+/* GAMES GRID */
 
 .grid{
   display: grid;
@@ -97,7 +218,7 @@ body{
 }
 
 .grid-object{
-  grid-template-columns: repeat(20px, 1fr));
+  grid-template-columns: repeat(20px, 1fr);
   transition: scale .25s;
 }
 
@@ -116,6 +237,10 @@ body{
   filter: grayscale(10%) drop-shadow(1px 1px 8px rgba(0, 0, 0, 0.35));
 }
 
+/*  */
+
+/* FOOTER */
+
 footer button{
   background: transparent;
   padding: 9px;
@@ -130,7 +255,7 @@ footer button{
 }
 
 footer button:hover{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
   transform: scale(1.01);
 }
 
@@ -158,28 +283,4 @@ footer a{
   text-decoration: none;
 }
 
-/* .easteregg{
-  position: absolute;
-  bottom: 0;
-}
-
-.easteregg button{
-  background: transparent;
-  padding: 2px;
-  margin: 8px;
-  margin-left: 50px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  font-size: 1px;
-  color: var(--background);
-  font-family: LGC-light;
-  cursor: default;
-}
-
-.easteregg button:hover{
-  box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
-}
-
-@media screen and (max-width: 1750px) {
-    .easteregg {display:none;}
-} */
+/*  */

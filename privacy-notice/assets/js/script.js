@@ -22,16 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; SameSite=None; Secure";
-}
-
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -44,24 +34,10 @@ function getCookie(name) {
     return null;
 }
 
-function toggleColoration(){
-    if (document.querySelector("html").getAttribute("data-dark-mode") == null) {
-      document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
-      console.log("Debug: darkmode");
-      document.querySelector("html").toggleAttribute("data-dark-mode");
-      setCookie('toggleDarkMode', "0", 7);
-    }else{
-      document.getElementById('lgo').src = "assets/data/img/logo1-scaled.png";
-      console.log("Debug: whitemode");
-      document.querySelector("html").toggleAttribute("data-dark-mode");
-      setCookie('toggleDarkMode', "1", 7);
-    }
-}
-
 document.addEventListener("DOMContentLoaded", function(){
-  if(getCookie('toggleDarkMode') == "0"){
-      document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
-      document.querySelector("html").toggleAttribute("data-dark-mode");
-      console.log("Debug: whitemode");
-  }
+    if(getCookie('main_darkmode') == "0"){
+        document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
+        document.querySelector("html").toggleAttribute("data-dark-mode");
+        console.log("Debug: darkmode");
+    }
 });
