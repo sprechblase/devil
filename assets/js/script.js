@@ -49,22 +49,32 @@ var dropdownOpened = false;
 function toggleDropdown(){
   if(dropdownOpened == false){
     document.getElementById("dropdown").style.display = "block";
+    document.getElementById("settings-down").style.display = "inline-block";
     dropdownOpened = true;
   }else if(dropdownOpened == true){
     document.getElementById("dropdown").style.display = "none";
+    document.getElementById("settings-down").style.display = "none";
     dropdownOpened = false;
   }
+}
+
+window.onload = () => {
+  document.body.addEventListener('click', function(e) {
+    if(!e.target.classList.contains('st')){
+      document.getElementById("dropdown").style.display = "none";
+      document.getElementById("settings-down").style.display = "none";
+      dropdownOpened = false;
+    }
+  });
 }
 
 function switchClicked(){
   if (document.querySelector("html").getAttribute("data-dark-mode") == null) {
     document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
-    console.log("Debug: darkmode");
     document.querySelector("html").toggleAttribute("data-dark-mode");
     setCookie('main_darkmode', "0", 7);
   }else{
     document.getElementById('lgo').src = "assets/data/img/logo1-scaled.png";
-    console.log("Debug: whitemode");
     document.querySelector("html").toggleAttribute("data-dark-mode");
     setCookie('main_darkmode', "1", 7);
   }
@@ -74,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function(){
   if(getCookie('main_darkmode') == "0"){
       document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
       document.querySelector("html").toggleAttribute("data-dark-mode");
-      console.log("Debug: darkmode");
       document.getElementById("checkbox").checked = true;
   }
 });

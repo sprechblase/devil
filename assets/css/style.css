@@ -76,7 +76,6 @@ body{
   padding-left: 6px;
   padding-right: 6px;
   cursor: pointer;
-  transition: .5s;
 }
 
 .settings .label .settings-label-icons:hover{
@@ -86,7 +85,6 @@ body{
 .settings .label .settings-down{
   padding-left: 4px;
   display: none;
-  transition: .5s;
 }
 
 .settings .label .settings-label-icons:hover .settings-down{
@@ -181,6 +179,10 @@ body{
   right: 0;
   transform: translateY(-50%);
   color: var(--accent);
+}
+
+.hide{
+  display: none !important;
 }
 
 /*  */
