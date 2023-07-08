@@ -261,6 +261,7 @@ footer button{
 footer button i{
   font-size: 28px;
   position: absolute;
+  color: var(--text);
 }
 
 footer button:hover{
