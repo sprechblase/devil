@@ -91,10 +91,6 @@ body{
   display: none;
 }
 
-.settings .label .settings-label-icons:hover .settings-down{
-  display: inline-block;
-}
-
 .settings #dropdown{
   display: none;
   position: absolute;
