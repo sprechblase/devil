@@ -44,6 +44,7 @@ SOFTWARE.
 
 :root{
   --text: #131801;
+  --textRGB: 19, 24, 1;
   --background: #fdfff5;
   --background2: #f1f3e9;
   --background3: #eaedde;
@@ -60,23 +61,6 @@ body{
   margin: 0;
   min-height: 100%;
   touch-action: manipulation;
-}
-
-.music-switch{
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
-  color: var(--text);
-  transition: 1s;
-}
-
-#musicOn{
-  display: none;
-}
-
-#musicOff{
-  display: inline;
 }
 
 .site-title{
@@ -206,7 +190,7 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
-button{
+.gameover button{
   background: transparent;
   padding: 9px;
   padding-left: 15px;
@@ -220,7 +204,16 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+.gameover button i{
+  font-size: 28px;
+  position: absolute;
+}
+
+.gameover button #restart-text{
+  padding-left: 34px;
+}
+
+.gameover button:hover{
   box-shadow: rgba(244,194,41, 0.24) 0px 3px 8px;
   transform: scale(1.01);
 }
@@ -238,8 +231,13 @@ footer button{
   cursor: pointer;
 }
 
+footer button i{
+  font-size: 28px;
+  position: absolute;
+}
+
 footer button:hover{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
   transform: scale(1.01);
 }
 
@@ -248,7 +246,7 @@ footer{
   text-align: center;
   bottom: 0;
   left: 0;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 50px;
   font-size: 23px;
   width: 100%;
@@ -258,4 +256,8 @@ footer{
 footer a{
   color: var(--text);
   text-decoration: none;
+}
+
+footer button a{
+  padding-left: 32px;
 }

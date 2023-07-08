@@ -22,26 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-
-var music = {
-  background: new Howl({
-    src: ['./assets/data/sounds/background.mp3'],
-    html5: true
-  })
-}
-
-function musicSwitch(){
-  if (music.background.playing()) {
-    music.background.stop();
-    document.getElementById("musicOff").style.display = "inline";
-    document.getElementById("musicOn").style.display = "none";
-  }else{
-    music.background.play();
-    document.getElementById("musicOn").style.display = "inline";
-    document.getElementById("musicOff").style.display = "none";
-  }
-}
-
 var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,

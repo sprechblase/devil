@@ -29,7 +29,7 @@ SOFTWARE.
     <title>devil's Page</title>
     <link rel="icon" type="image/x-icon" href="assets/data/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script language="javascript" type="text/javascript" src="assets/js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-Type" content="text/html; utf-8">
@@ -63,18 +63,19 @@ SOFTWARE.
   <body>
     <div class="st settings" id="settings">
       <div class="st label" id="label" onclick="toggleDropdown()">
-        <label class="st settings-label-icons"><i class="st fa-solid fa-gear fa-xl settings-gear"></i>
-        <i class="st fa-solid fa-caret-down fa-xl settings-down" id="settings-down"></i></label>
+        <label class="st settings-label-icons"><i class="st ph ph-gear settings-gear"></i>
+        <i class="st ph-duotone ph-caret-down settings-down" id="settings-down"></i></label>
       </div>
       <div class="st dropdown" id="dropdown">
         <div class="st switch-container">
-          <i class="st fa-solid fa-lightbulb" id="switch-white"></i>
+          <i class="st ph-duotone ph-sun-dim" id="switch-white"></i>
           <label class="st switch" id="switch">
             <input type="checkbox" class="st checkbox" id="checkbox" onclick="switchClicked()">
             <span class="st slider"></span>
           </label>
-          <i class="st fa-solid fa-moon" id="switch-dark"></i>
+          <i class="st ph-duotone ph-moon-stars" id="switch-dark"></i>
         </div>
+        <hr>
       </div>
     </div>
     <div class="site-title">
@@ -106,7 +107,7 @@ SOFTWARE.
   </body>
   <footer>
     a fun page straight from the devil
-    <button type="button" name="twitter"><a href="https://twitter.com/m3sus"><i class="fa-brands fa-twitter"></i> Twitter</a></button><button type="button" name="github""><a href="https://github.com/Sprechblase"><i class="fa-brands fa-github"></i> GitHub</a></button>
+    <button type="button" name="twitter"><i class="ph-light ph-twitter-logo"></i><a href="https://twitter.com/m3sus"> Twitter</a></button><button type="button" name="github"><i class="ph-light ph-github-logo"></i><a href="https://github.com/Sprechblase"> GitHub</a></button>
     Say hi at: <a href="mailto:hi@devil.pm">hi@devil.pm</a>
     <div class="privacy-policy"><a href="privacy-notice/index.html">Privacy Notice</a></div>
     <!-- shoutout to neal agarwal <3 -->

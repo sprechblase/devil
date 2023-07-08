@@ -70,9 +70,9 @@ body{
   right: 7px;
   top: 7px;
   border: 1.9px solid var(--text);
-  border-radius: 10px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  border-radius: 12px;
+  padding-top: 6px;
+  padding-bottom: 4px;
   padding-left: 6px;
   padding-right: 6px;
   cursor: pointer;
@@ -82,8 +82,12 @@ body{
   box-shadow: var(--text) 0px 3px 8px;
 }
 
+.settings .label .settings-gear{
+  font-size: 25px;
+}
+
 .settings .label .settings-down{
-  padding-left: 4px;
+  font-size: 25px;
   display: none;
 }
 
@@ -95,10 +99,10 @@ body{
   display: none;
   position: absolute;
   right: 7px;
-  top: 60px;
+  top: 54px;
   background-color: var(--background);
   border: 1px solid var(--text);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
 }
@@ -115,8 +119,8 @@ body{
   display: inline-block;
   width: 80px;
   height: 34px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .settings #dropdown .switch input{
@@ -171,6 +175,7 @@ body{
   left: 0;
   transform: translateY(-50%);
   color: var(--accent);
+  font-size: 28px;
 }
 
 .settings #dropdown .switch-container #switch-dark{
@@ -179,6 +184,7 @@ body{
   right: 0;
   transform: translateY(-50%);
   color: var(--accent);
+  font-size: 28px;
 }
 
 .hide{
@@ -256,6 +262,11 @@ footer button{
   cursor: pointer;
 }
 
+footer button i{
+  font-size: 28px;
+  position: absolute;
+}
+
 footer button:hover{
   box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
   transform: scale(1.01);
@@ -275,6 +286,10 @@ footer{
 footer a{
   color: var(--text);
   text-decoration: none;
+}
+
+footer button a{
+  padding-left: 32px;
 }
 
 .privacy-policy{

@@ -68,6 +68,7 @@ SOFTWARE.
 
 :root{
   --text: #e8e9e2;
+  --textRGB: 232, 233, 226;
   --background: #0d0d0d;
   --background2: #0f0f0f;
   --background3: #1d1d1d;
@@ -276,6 +277,17 @@ footer button{
   cursor: pointer;
 }
 
+footer button i{
+  font-size: 28px;
+  position: absolute;
+  color: var(--text);
+}
+
+footer button:hover{
+  box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
+  transform: scale(1.01);
+}
+
 footer{
   white-space: pre-line;
   text-align: center;
@@ -285,11 +297,16 @@ footer{
   font-size: 23px;
   width: 100%;
   font-family: LGC-light;
+  color: var(--text);
 }
 
 footer a{
   color: var(--text);
   text-decoration: none;
+}
+
+footer button a{
+  padding-left: 32px;
 }
 
 footer img{
@@ -299,6 +316,7 @@ footer img{
   transition: .3s;
   margin-top: 10px;
 }
+
 footer img:hover{
   filter: drop-shadow(1px 1px 3px rgba(232, 233, 226, 0.7));
   transform: scale(1.025);
