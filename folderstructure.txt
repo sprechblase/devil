@@ -1,0 +1,12 @@
+!BASIC FOLDER STRUCTURE
+
+.
+└── assets/
+    ├── css/
+    │   └── style.css (ex)
+    ├── js/
+    │   └── script.js (ex)
+    ├── data/
+    │   ├── img
+    │   └── fonts
+    └── common/
