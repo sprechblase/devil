@@ -34,6 +34,7 @@ SOFTWARE.
 
 :root{
   --text: #131801;
+  --textRGB: 19, 24, 1;
   --background: #fdfff5;
   --background2: #f1f3e9;
   --background3: #eaedde;
@@ -45,6 +46,7 @@ SOFTWARE.
 
 [data-dark-mode]{
   --text: #e8e9e2;
+  --textRGB: 232, 233, 226;
   --background: #11110d;
   --background2: #1c1c18;
   --backgroundAccent: #131310;
@@ -72,6 +74,12 @@ body{
   max-width: 100%;
   width: 320px;
   height: auto;
+  transition: .3s;
+}
+
+.site-title img:hover{
+  filter: drop-shadow(1px 1px 3px rgba(var(--textRGB), 0.7));
+  transform: scale(1.02);
 }
 
 .box{

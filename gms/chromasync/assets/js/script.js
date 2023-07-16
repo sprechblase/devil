@@ -23,83 +23,84 @@ SOFTWARE.
 */
 
 window.onload = () => {
-  const highScoreElement = document.getElementById('totalscore');
-  const checkSync = document.getElementById('checkSync');
-  const colorPicker = document.getElementById('colorPicker');
-  const colorBox = document.querySelector("#colorBox");
-  var localHighScore = localStorage.getItem("localHighScore");
+  function game(){
+    const highScoreElement = document.getElementById('totalscore');
+    const checkSync = document.getElementById('checkSync');
+    const colorPicker = document.getElementById('colorPicker');
+    const colorBox = document.querySelector("#colorBox");
+    var localHighScore = localStorage.getItem("localHighScore");
 
-  function hexToRgb(hex) {
-  	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  	return result
-  		? {
-  				r: parseInt(result[1], 16),
-  				g: parseInt(result[2], 16),
-  				b: parseInt(result[3], 16)
-  		  }
-  		: null;
-  }
-
-  let highScore = 0;
-  let round = 1;
-  let targetColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
-  colorBox.style.backgroundColor = targetColor;
-  if(localHighScore == null){
-    document.getElementById('highScore').textContent = "HIGHSCORE: 0"
-  }else{
-    document.getElementById('highScore').textContent = "HIGHSCORE: " + localHighScore;
-  }
-
-  colorPicker.addEventListener("input", () => {
-  	checkSync.style.backgroundColor = colorPicker.value.toUpperCase();
-  });
-
-  checkSync.addEventListener("click", () => {
-    const pickedColor = colorPicker.value.toUpperCase();
-    const targetRgb = hexToRgb(targetColor);
-    const pickedRgb = hexToRgb(pickedColor);
-
-    const distance = Math.sqrt(Math.pow(targetRgb.r - pickedRgb.r, 2) + Math.pow(targetRgb.g - pickedRgb.g, 2) + Math.pow(targetRgb.b - pickedRgb.b, 2));
-    const roundScore = Math.max(0, Math.round((1 - distance / Math.sqrt(3 * Math.pow(255, 2))) * 1000));
-    highScore += roundScore;
-    highScoreElement.textContent = "TOTALSCORE: \n" + highScore;
-    const perc = ((roundScore / 1000) * 100).toFixed(2);
-
-    if(localHighScore < highScore){
-      localStorage.setItem("localHighScore", highScore);
-      document.getElementById('highScore').textContent = "HIGHSCORE: " + highScore;
+    function hexToRgb(hex) {
+    	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    	return result
+    		? {
+    				r: parseInt(result[1], 16),
+    				g: parseInt(result[2], 16),
+    				b: parseInt(result[3], 16)
+    		  }
+    		: null;
     }
 
-    if(perc == 100){
-      document.getElementById('msg').textContent = "Wow! You've matched it perfectly. (" + perc + "%)";
-      document.getElementById('msg').style.color = "#26ab2b";
-    }else if(perc > 92){
-      document.getElementById('msg').textContent = "You are so close!! Try again. (" + perc + "%)";
-      document.getElementById('msg').style.color = "#acb334";
-    }else if(perc > 80){
-      document.getElementById('msg').textContent = "Pretty good! Try again. (" + perc + "%)";
-      document.getElementById('msg').style.color = "#fab733";
-    }else if(perc > 60){
-      document.getElementById('msg').textContent = "You're starting to get better. (" + perc + "%)";
-      document.getElementById('msg').style.color = "#ff8e15";
-    }else if(perc > 40){
-      document.getElementById('msg').textContent = "Cheer up you can do it! Try again. (" + perc + "%)";
-      document.getElementById('msg').style.color = "#ff4e11";
-    }else{
-      document.getElementById('msg').textContent = "Maybe try a color vision test instead? (" + perc + "%)";
-      document.getElementById('msg').style.color = "#ff0d0d";
-    }
-
-    targetColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+    let highScore = 0;
+    let targetColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
     colorBox.style.backgroundColor = targetColor;
-
-    round++;
-    document.getElementById('roundCount').textContent = round-1 + "/3";
-
-    if(round > 3){
-      checkSync.disabled = true;
-      document.getElementById('msg').style.color = "#d5d224";
-      document.getElementById('msg').textContent = 'Good job! Refresh to start over again (' + ((highScore / 6000) * 100).toFixed(2) + '%)';
+    if(localHighScore == null){
+      document.getElementById('highScore').textContent = "HIGHSCORE: 0%"
+    }else{
+      document.getElementById('highScore').textContent = "HIGHSCORE: " + localHighScore + "%";
     }
-  });
+
+    colorPicker.addEventListener("input", () => {
+    	checkSync.style.backgroundColor = colorPicker.value.toUpperCase();
+    });
+
+    checkSync.addEventListener("click", () => {
+      const pickedColor = colorPicker.value.toUpperCase();
+      const targetRgb = hexToRgb(targetColor);
+      const pickedRgb = hexToRgb(pickedColor);
+
+      const distance = Math.sqrt(Math.pow(targetRgb.r - pickedRgb.r, 2) + Math.pow(targetRgb.g - pickedRgb.g, 2) + Math.pow(targetRgb.b - pickedRgb.b, 2));
+      const roundScore = Math.max(0, Math.round((1 - distance / Math.sqrt(3 * Math.pow(255, 2))) * 1000));
+      highScore += roundScore;
+      const perc = ((roundScore / 1000) * 100).toFixed(2);
+      highScoreElement.textContent = perc + "%";
+
+      if(perc > 90){
+        highScoreElement.style.color = "#257a24";
+      }else if(perc > 80){
+        highScoreElement.style.color = "#4a8720";
+      }else if(perc > 70){
+        highScoreElement.style.color = "#7e951a";
+      }else if(perc > 60){
+        highScoreElement.style.color = "#6b911c";
+      }else if(perc > 50){
+        highScoreElement.style.color = "#939a18";
+      }else if(perc > 40){
+        highScoreElement.style.color = "#a38413";
+      }else{
+        highScoreElement.style.color = "#b53307";
+      }
+
+      if(perc > localHighScore){
+        localStorage.setItem("localHighScore", perc);
+        document.getElementById('highScore').textContent = "HIGHSCORE: " + perc + "%";
+      }
+
+      targetColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+      colorBox.style.backgroundColor = targetColor;
+
+      checkSync.style.display = "none";
+      document.getElementById("restart").style.display = "inline-block";
+      document.getElementById("color-input").style.display = "none";
+      colorBox.style.backgroundColor = "#0f0f0f";
+    });
+
+    document.getElementById("restart").addEventListener("click", () => {
+      document.getElementById("restart").style.display = "none";
+      checkSync.style.display = "inline-block";
+      document.getElementById("color-input").style.display = "block";
+      game();
+    });
+  }
+  game();
 }
