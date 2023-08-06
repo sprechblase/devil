@@ -222,7 +222,6 @@ body{
 }
 
 .grid-object{
-  grid-template-columns: repeat(20px, 1fr);
   transition: scale .25s;
 }
 
