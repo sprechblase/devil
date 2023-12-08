@@ -71,10 +71,12 @@ window.onload = () => {
 function switchClicked(){
   if (document.querySelector("html").getAttribute("data-dark-mode") == null) {
     document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
+    document.getElementById('lgo2').src = "assets/data/img/1.png";
     document.querySelector("html").toggleAttribute("data-dark-mode");
     setCookie('main_darkmode', "0", 7);
   }else{
     document.getElementById('lgo').src = "assets/data/img/logo1-scaled.png";
+    document.getElementById('lgo2').src = "assets/data/img/3.png";
     document.querySelector("html").toggleAttribute("data-dark-mode");
     setCookie('main_darkmode', "1", 7);
   }
@@ -83,6 +85,7 @@ function switchClicked(){
 document.addEventListener("DOMContentLoaded", function(){
   if(getCookie('main_darkmode') == "0"){
       document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
+      document.getElementById('lgo2').src = "assets/data/img/1.png";
       document.querySelector("html").toggleAttribute("data-dark-mode");
       document.getElementById("checkbox").checked = true;
   }

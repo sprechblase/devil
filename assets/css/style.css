@@ -45,9 +45,9 @@ SOFTWARE.
 }
 
 [data-dark-mode]{
-  --text: #e8e9e2;
-  --textRGB: 232, 233, 226;
-  --background: #11110d;
+  --text: #d3d4ce;
+  --textRGB: 211, 212, 206;
+  --background: #0e0e16;
   --background2: #1c1c18;
   --backgroundAccent: #131310;
   --primary-button: #434054;
@@ -294,6 +294,15 @@ footer button a{
   font-family: LGC-light;
   color: var(--text);
   text-decoration: none;
+}
+
+footer img{
+  width: 39px;
+  height: auto;
+  opacity: 25%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 /*  */

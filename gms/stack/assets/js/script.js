@@ -55,7 +55,7 @@ var ground = Bodies.rectangle(400, 1050, 2000, 200, {
     render: {
       sprite: {
           // texture: "/gms/stack/assets/data/img/StoneFloorTexture.jpg",
-          texture: "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+          texture: "https://skre.dev/gms/stack/assets/data/img/StoneFloorTexture.jpg",
           xScale: 2,
           yScale: 0.45,
       }
@@ -86,13 +86,13 @@ function preload() {
 }
 
 preload(
-    "https://devil.pm/gms/stack/assets/data/img/StoneFloorTexture.jpg",
-    "https://devil.pm/gms/stack/assets/data/img/block.png",
-    "https://devil.pm/gms/stack/assets/data/img/block2.png",
-    "https://devil.pm/gms/stack/assets/data/img/block3.png",
-    "https://devil.pm/gms/stack/assets/data/img/block4.png",
-    "https://devil.pm/gms/stack/assets/data/img/block5.png",
-    "https://devil.pm/gms/stack/assets/data/img/block6.png"
+    "https://skre.dev/gms/stack/assets/data/img/StoneFloorTexture.jpg",
+    "https://skre.dev/gms/stack/assets/data/img/block.png",
+    "https://skre.dev/gms/stack/assets/data/img/block2.png",
+    "https://skre.dev/gms/stack/assets/data/img/block3.png",
+    "https://skre.dev/gms/stack/assets/data/img/block4.png",
+    "https://skre.dev/gms/stack/assets/data/img/block5.png",
+    "https://skre.dev/gms/stack/assets/data/img/block6.png"
 )
 
 if(highscore == null){highscoreDisplay.textContent = 'Highscore: 0';}else{highscoreDisplay.textContent = 'Highscore: ' + highscore;}
@@ -118,7 +118,7 @@ function createBlock() {
       render: {
         sprite: {
           // texture: "/gms/stack/assets/data/img/" + pics[picnumber],
-          texture: "https://devil.pm/gms/stack/assets/data/img/" + pics[picnumber],
+          texture: "https://skre.dev/gms/stack/assets/data/img/" + pics[picnumber],
           xScale: .162,
           yScale: .162,
         }

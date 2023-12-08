@@ -37,6 +37,7 @@ function getCookie(name) {
 document.addEventListener("DOMContentLoaded", function(){
     if(getCookie('main_darkmode') == "0"){
         document.getElementById('lgo').src = "assets/data/img/logo1_white-scaled.png";
+        document.getElementById('lgo2').src = "assets/data/img/1.png";
         document.querySelector("html").toggleAttribute("data-dark-mode");
         console.log("Debug: darkmode");
     }

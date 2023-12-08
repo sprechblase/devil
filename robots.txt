@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://devil.pm/sitemap.xml
+Sitemap: https://skre.dev/sitemap.xml
