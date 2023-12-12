@@ -234,6 +234,7 @@ footer button{
   font-size: 25px;
   font-family: LGC-light;
   cursor: pointer;
+  transition: scale .2s;
 }
 
 footer button i{
@@ -243,7 +244,7 @@ footer button i{
 
 footer button:hover{
   box-shadow: rgba(var(--textRGB), 0.24) 0px 3px 8px;
-  transform: scale(1.01);
+  scale: 101%;
 }
 
 footer{

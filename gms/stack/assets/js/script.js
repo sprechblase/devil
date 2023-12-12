@@ -121,7 +121,8 @@ function createBlock() {
           texture: "https://skre.dev/gms/stack/assets/data/img/" + pics[picnumber],
           xScale: .162,
           yScale: .162,
-        }
+        },
+        isStatic: true
       },
     });
     // boxCurrent.render.fillStyle = "#131801";
